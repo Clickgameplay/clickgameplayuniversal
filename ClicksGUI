@@ -15,3 +15,24 @@ local Window = Fluent:CreateWindow({
     MinimizeKey = Enum.KeyCode.P -- Used when theres no MinimizeKeybind
 })
 
+ local Tabs = {
+ Main = Window:AddTab({ Title = "Main stuff", Icon = "globe" }),
+ Games = Window:AddTab({ Title = "Games", Icon = "gamepad-2" }),
+ User = Window:AddTab({ Title = "Character", Icon = "user" }),
+ Hubs = Window:AddTab({ Title = "Other hubs", Icon = "focus" }),
+ Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
+ }
+
+local Options = Fluent.Options
+
+do
+ 
+    
+    end
+
+
+        Tabs.Main:AddButton({
+        Title = "Infinite Yield",
+        Description = "FE 'Admin' Script",
+        Callback = function()
+         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
