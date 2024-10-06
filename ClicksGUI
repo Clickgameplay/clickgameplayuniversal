@@ -11,8 +11,4 @@ local Window = Fluent:CreateWindow({
     Theme = "Amethyst",
     MinimizeKey = Enum.KeyCode.P -- Used when theres no MinimizeKeybind
 })
- local Tabs = {
- Main = Window:AddTab({ Title = "Main stuff", Icon = "globe" }),
- Games = Window:AddTab({ Title = "Games", Icon = "gamepad-2"}),
 
- }
