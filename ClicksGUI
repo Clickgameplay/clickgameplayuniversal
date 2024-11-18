@@ -1,41 +1,14 @@
 --real moment
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-
-local player = game.Players.LocalPlayer
-local character = player.Character
-local humanoid = character and character:FindFirstChild("Humanoid")
-
-local Window = Fluent:CreateWindow({
-    Title = "Clickgameplay's Universal Script v0.0.1"
-    SubTitle = "discord: clickgameplay1",
-    TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Amethyst",
-    MinimizeKey = Enum.KeyCode.P -- Used when theres no MinimizeKeybind
-})
-
- local Tabs = {
- Main = Window:AddTab({ Title = "Main stuff", Icon = "globe" }),
- Games = Window:AddTab({ Title = "Games", Icon = "gamepad-2" }),
- User = Window:AddTab({ Title = "Character", Icon = "user" }),
- Hubs = Window:AddTab({ Title = "Other hubs", Icon = "focus" }),
- Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
- }
-
-local Options = Fluent.Options
-
-do
- 
-    
-    end
-
-
-        Tabs.Main:AddButton({
-        Title = "Infinite Yield",
-        Description = "FE 'Admin' Script",
-        Callback = function()
-         loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-end
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]]
