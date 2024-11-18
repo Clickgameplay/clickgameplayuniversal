@@ -33,7 +33,8 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("General", "globe")
+local Tab = Window:CreateTab("General")
+local Section = Tab:CreateSection("Section Example")
 
 
 
