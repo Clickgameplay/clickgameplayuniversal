@@ -1,4 +1,8 @@
 --real moment
+
+print (tostring(game:HttpGet("https://raw.githubusercontent.com/Clickgameplay/clickgameplayuniversal/refs/heads/main/print", true))) -- sauce im sorry i copied i just want to revive you 😭
+print (tostring(game:HttpGet("https://raw.githubusercontent.com/Clickgameplay/clickgameplayuniversal/refs/heads/main/print2", true))) 
+
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 local Window = Rayfield:CreateWindow({
    Name = "Click's Universal Script ",
@@ -33,7 +37,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("General")
+local Tab = Window:CreateTab("General", "globe")
 local Section = Tab:CreateSection("General stuff")
 local Button = Tab:CreateButton({
    Name = "Infinite yield",
