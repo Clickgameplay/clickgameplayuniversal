@@ -26,7 +26,7 @@ local Window = Rayfield:CreateWindow({
       Title = "Clickgameplay Universal Script Key System",
       Subtitle = "Key System",
       Note = "Get the key in Click's discord: 8nb9B9ZAZy", -- Use this to tell the user how to get a key
-      FileName = "KeyClickgameplay", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      FileName = "KeyClickgameplay.txt", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"69gamingreal69"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
@@ -34,8 +34,15 @@ local Window = Rayfield:CreateWindow({
 })
 
 local Tab = Window:CreateTab("General")
-local Section = Tab:CreateSection("Section Example")
-
+local Section = Tab:CreateSection("General stuff")
+local Button = Tab:CreateButton({
+   Name = "Infinite yield",
+   Callback = function()
+   -- The function that takes place when the button is pressed
+   end,
+})
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+Button:Set("Infinite yield")
 
 
 
