@@ -11,8 +11,8 @@ local Window = Rayfield:CreateWindow({
 
    ConfigurationSaving = {
       Enabled = true,
-      FolderName = nil, -- Create a custom folder for your hub/game
-      FileName = "Big Hub"
+      FolderName = "clickgameplayuniversalscript", -- Create a custom folder for your hub/game
+      FileName = "save"
    },
 
    Discord = {
@@ -26,7 +26,7 @@ local Window = Rayfield:CreateWindow({
       Title = "Clickgameplay Universal Script Key System",
       Subtitle = "Key System",
       Note = "Get the key in Click's discord: 8nb9B9ZAZy", -- Use this to tell the user how to get a key
-      FileName = "KeyClickgameplay.txt", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
+      FileName = "clickgameplaykey", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
       SaveKey = true, -- The user's key will be saved, but if you change the key, they will be unable to use your script
       GrabKeyFromSite = false, -- If this is true, set Key below to the RAW site you would like Rayfield to get the key from
       Key = {"69gamingreal69"} -- List of keys that will be accepted by the system, can be RAW file links (pastebin, github etc) or simple strings ("hello","key22")
@@ -38,11 +38,43 @@ local Section = Tab:CreateSection("General stuff")
 local Button = Tab:CreateButton({
    Name = "Infinite yield",
    Callback = function()
-   -- The function that takes place when the button is pressed
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+Rayfield:Notify({
+   Title = "Successfully Loaded!",
+   Content = "Works without issues (hopefully)",
+   Duration = 3,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = { -- Duplicate this table (or remove it) to add and remove buttons to the notification.
+         Name = "Okay!",
+         Callback = function()
+         end
+      },
+
+},
+})
    end,
 })
-loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
-Button:Set("Infinite yield")
+local Button = Tab:CreateButton({
+   Name = "Button Example",
+   Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vqmpjayZ/Bypass/main/vadrifts.lua"))()
+Rayfield:Notify({
+   Title = "Successfully Loaded!",
+   Content = "Works without issues (hopefully)",
+   Duration = 3,
+   Image = 4483362458,
+   Actions = { -- Notification Buttons
+      Ignore = { -- Duplicate this table (or remove it) to add and remove buttons to the notification.
+         Name = "Okay!",
+         Callback = function()
+         end
+      },
+
+},
+})
+   end,
+})
 
 
 
