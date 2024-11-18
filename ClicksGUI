@@ -23,7 +23,7 @@ local Window = Rayfield:CreateWindow({
 
    KeySystem = true, -- Set this to true to use our key system
    KeySettings = {
-      Title = "test",
+      Title = "Clickgameplay Universal Script Key System",
       Subtitle = "Key System",
       Note = "Get the key in Click's discord: 8nb9B9ZAZy", -- Use this to tell the user how to get a key
       FileName = "KeyClickgameplay", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
