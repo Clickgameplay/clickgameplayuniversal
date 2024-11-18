@@ -1,6 +1,6 @@
 --real moment
 local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-local Window = OrionLib:MakeWindow({Name = "Title of the library", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+local Window = OrionLib:MakeWindow({Name = "Clickgameplay's Universal Script", HidePremium = false, SaveConfig = true, ConfigFolder = "Clickgameplayuniversal", IntroText = "Welcome to Click's Universal script!})
 [[
 Name = <string> - The name of the UI.
 HidePremium = <bool> - Whether or not the user details shows Premium status or not.
