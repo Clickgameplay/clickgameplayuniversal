@@ -125,18 +125,6 @@ Rayfield:Notify({
 
 
 local Settings = Window:CreateTab("Settings", "wrench") -- Title, Image
--- Create a dropdown for selecting themes
-local Dropdown = Settings:CreateDropdown({
-   Name = "Themes",
-   Options = {"Default","AmberGlow"},
-   CurrentOption = {"Default"},
-   MultipleOptions = false,
-   Flag = "themes", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Options)
-   Window.ModifyTheme('AmberGlow')
-   -- The variable (Options) is a table of strings for the current selected options
-   end,
-})
 local Dropdown = Settings:CreateDropdown({
    Name = "Theme Selector",
    Options = {"Default", "Amber Glow", "Amethyst", "Bloom", "Dark Blue", "Green", "Light", "Ocean", "Serenity"},
