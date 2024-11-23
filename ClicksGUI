@@ -130,7 +130,6 @@ Rayfield:Notify({
 
 
 
-
 local Settings = Window:CreateTab("Settings", "wrench") -- Title, Image
 local Dropdown = Settings:CreateDropdown({
    Name = "Theme Selector",
