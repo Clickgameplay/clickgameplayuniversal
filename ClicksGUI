@@ -137,7 +137,7 @@ local Dropdown = Settings:CreateDropdown({
    -- The variable (Options) is a table of strings for the current selected options
    end,
 })
-local Dropdown = Tab:CreateDropdown({
+local Dropdown = Settings:CreateDropdown({
    Name = "Theme Selector",
    Options = {"Default", "Amber Glow", "Amethyst", "Bloom", "Dark Blue", "Green", "Light", "Ocean", "Serenity"},
    CurrentOption = {"Default"}, -- Default selected theme
