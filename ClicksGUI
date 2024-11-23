@@ -125,7 +125,8 @@ Rayfield:Notify({
 
 
 local Tab = Window:CreateTab("Settings", "wrench") -- Title, Image
-local Dropdown = Settings:CreateDropdown({
+-- Create a dropdown for selecting themes
+local Dropdown = Tab:CreateDropdown({
     Name = "Select Theme",
     Options = {"Default", "Amber Glow", "Amethyst", "Bloom", "Dark Blue", "Green", "Light", "Ocean", "Serenity"},
     CurrentOption = "Default", -- Set the initial selected theme
@@ -144,10 +145,13 @@ local Dropdown = Settings:CreateDropdown({
             ["Ocean"] = "Ocean",
             ["Serenity"] = "Serenity"
         }
-        
+
+        -- Trim spaces or unexpected characters (optional)
+        Option = string.gsub(Option, "^%s*(.-)%s*$", "%1")
+
         -- Retrieve the ThemeIdentifier for the selected theme
         local selectedTheme = themes[Option]
-        
+
         -- Change the theme using the ModifyTheme function
         if selectedTheme then
             Window.ModifyTheme(selectedTheme)
@@ -156,5 +160,4 @@ local Dropdown = Settings:CreateDropdown({
         end
     end,
 })
-
 Rayfield:LoadConfiguration()
