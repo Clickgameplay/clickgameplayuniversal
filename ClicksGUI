@@ -125,15 +125,37 @@ Rayfield:Notify({
 
 
 local settings = Window:CreateTab("Settings", "wrench") -- Title, Image
-local Dropdown = settings:CreateDropdown({
-   Name = "Themes",
-   Options = {"Option 1","Option 2"},
-   CurrentOption = {"Option 1"},
-   MultipleOptions = false,
-   Flag = "Dropdown1", -- A flag is the identifier for the configuration file, make sure every element has a different flag if you're using configuration saving to ensure no overlaps
-   Callback = function(Options)
-   Window.ModifyTheme('AmberGlow')
-   -- The variable (Options) is a table of strings for the current selected options
-   end,
+-- Create a dropdown for selecting themes
+local Dropdown = Tab:CreateDropdown({
+    Name = "Select Theme",
+    Options = {"Default", "Amber Glow", "Amethyst", "Bloom", "Dark Blue", "Green", "Light", "Ocean", "Serenity"},
+    CurrentOption = "Default", -- Set the initial selected theme
+    MultipleOptions = false,   -- Only allow one option to be selected
+    Flag = "ThemeDropdown",    -- Unique identifier for the dropdown
+    Callback = function(Option)
+        -- Map the selected name to its corresponding ThemeIdentifier
+        local themes = {
+            ["Default"] = "Default",
+            ["Amber Glow"] = "AmberGlow",
+            ["Amethyst"] = "Amethyst",
+            ["Bloom"] = "Bloom",
+            ["Dark Blue"] = "DarkBlue",
+            ["Green"] = "Green",
+            ["Light"] = "Light",
+            ["Ocean"] = "Ocean",
+            ["Serenity"] = "Serenity"
+        }
+        
+        -- Retrieve the ThemeIdentifier for the selected theme
+        local selectedTheme = themes[Option]
+        
+        -- Change the theme using the ModifyTheme function
+        if selectedTheme then
+            Window.ModifyTheme(selectedTheme)
+        else
+            warn("Theme not found for option: " .. tostring(Option))
+        end
+    end,
 })
+
 Rayfield:LoadConfiguration()
