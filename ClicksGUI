@@ -124,9 +124,9 @@ Rayfield:Notify({
 
 
 
-local Tab = Window:CreateTab("Settings", "wrench") -- Title, Image
+local Settings = Window:CreateTab("Settings", "wrench") -- Title, Image
 -- Create a dropdown for selecting themes
-local Dropdown = Tab:CreateDropdown({
+local Dropdown = Settings:CreateDropdown({
     Name = "Select Theme",
     Options = {"Default", "Amber Glow", "Amethyst", "Bloom", "Dark Blue", "Green", "Light", "Ocean", "Serenity"},
     CurrentOption = "Default", -- Set the initial selected theme
