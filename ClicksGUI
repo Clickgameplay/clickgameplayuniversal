@@ -61,10 +61,3 @@ local Button = Tab:CreateButton({
    loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
    end,
 })
-
-local Button = Tab:CreateButton({
-   Name = "SimpleSpy v2.2 Source - The script for making scripts",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/refs/heads/master/SimpleSpy.lua"))()
-   end,
-})
