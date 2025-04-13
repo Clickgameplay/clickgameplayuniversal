@@ -46,7 +46,7 @@ local Window = Rayfield:CreateWindow({
    }
 })
 
-local Tab = Window:CreateTab("General", scroll-text) -- Title, Image
+local Tab = Window:CreateTab("General", "scroll-text") -- Title, Image
 
 local Button = Tab:CreateButton({
    Name = "temporary for devs!11111 destroy gui!!!111111",
