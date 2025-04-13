@@ -7,8 +7,8 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 Rayfield:Notify({
    Title = "Still W.I.P",
    Content = "Reminder that this script is still work in progress, errors might occur if you see one, contact at discord: clickgameplay1",
-   Duration = 5,
-   Image = hammer,
+   Duration = 7.5,
+   Image = "hammer",
 })
 
 
@@ -48,6 +48,7 @@ local Window = Rayfield:CreateWindow({
 
 local Tab = Window:CreateTab("General", "scroll-text") -- Title, Image
 
+local Section = Tab:CreateSection("test")
 local Button = Tab:CreateButton({
    Name = "temporary for devs!11111 destroy gui!!!111111",
    Callback = function()
@@ -63,12 +64,12 @@ local Button = Tab:CreateButton({
 })
 
 local Button = Tab:CreateButton({
-   Name = "SimpleSpy v2.2 Source - The script for creating scripts"
+   Name = "SimpleSpy v2.2 Source - The script for creating scripts",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/refs/heads/master/SimpleSpy.lua"))()
    end,
 })
 
-
+Section:Set("test")
 
 Rayfield:LoadConfiguration()
