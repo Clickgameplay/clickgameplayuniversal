@@ -48,7 +48,7 @@ local Window = Rayfield:CreateWindow({
 
 local Tab = Window:CreateTab("General", "scroll-text") -- Title, Image
 
-local Section = Tab:CreateSection("test")
+local Section = Tab:CreateSection("Useful")
 local Button = Tab:CreateButton({
    Name = "temporary for devs!11111 destroy gui!!!111111",
    Callback = function()
@@ -64,12 +64,11 @@ local Button = Tab:CreateButton({
 })
 
 local Button = Tab:CreateButton({
-   Name = "SimpleSpy v2.2 Source - The script for creating scripts",
+   Name = "Dex - Explorer",
    Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/refs/heads/master/SimpleSpy.lua"))()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
    end,
 })
-
-Section:Set("test")
+Section:Set("Useful")
 
 Rayfield:LoadConfiguration()
