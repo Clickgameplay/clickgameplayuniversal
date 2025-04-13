@@ -40,23 +40,3 @@ local Window = Rayfield:CreateWindow({
 
 local Tab = Window:CreateTab("General, scroll-text) -- Title, Image
 
-local Button = Tab:CreateButton({
-   Name = "temporary for devs!11111 destroy gui!!!111111",
-   Callback = function()
-   Rayfield:Destroy()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "Infinite yield - A FE 'admin' script",
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
-   end,
-})
-
-local Button = Tab:CreateButton({
-   Name = "SimpleSpy v2.2 Source - The script for creating scripts"
-   Callback = function()
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/refs/heads/master/SimpleSpy.lua"))()
-   end,
-})
