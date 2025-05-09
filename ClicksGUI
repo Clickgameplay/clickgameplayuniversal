@@ -70,6 +70,22 @@ local Button = Tab:CreateButton({
    end,
 })
 
+
+local Button = Tab:CreateButton({
+   Name = "SimpleSpyV3 - A utility remote spy used to make other scripts"
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Turtle Spy - Another utility remote spy used to make other scripts"
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
+   end,
+})
+
+
 Section:Set("Useful")
 
 Rayfield:LoadConfiguration()
