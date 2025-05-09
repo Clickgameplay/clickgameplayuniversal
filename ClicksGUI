@@ -6,7 +6,7 @@ local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 Rayfield:Notify({
    Title = "Still W.I.P",
-   Content = "Reminder that this script is still work in progress, errors might occur if you see one, contact at discord: clickgameplay1",
+   Content = "This script is still work in progress, errors might occur, contact discord: clickgameplay1 if you see one",
    Duration = 7.5,
    Image = "hammer",
 })
@@ -67,6 +67,34 @@ local Button = Tab:CreateButton({
    Name = "Dex - Explorer",
    Callback = function()
    loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/dex.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "SimpleSpyV3 - A utility remote spy used to make other scripts"
+   Callback = function()
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/infyiff/backup/main/SimpleSpyV3/main.lua"))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Turtle Spy - Another utility remote spy used to make other scripts"
+   Callback = function()
+   loadstring(game:HttpGet("https://pastebin.com/raw/BDhSQqUU", true))()
+   end,
+})
+
+local Button = Tab:CreateButton({
+   Name = "Hydroxide - Kinda like Cheat Engine, but on roblox"
+   Callback = function()
+   local branch = "revision"
+
+local function webImport(file)
+    return loadstring(game:HttpGetAsync(("https://raw.githubusercontent.com/%s/Hydroxide/%s/%s.lua"):format(owner, branch, file)), file .. '.lua')()
+end
+
+webImport("init")
+webImport("ui/main")
    end,
 })
 Section:Set("Useful")
